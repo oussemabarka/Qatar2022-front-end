@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">
-    <img src="assets/images/img_1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+    <img src="assets/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
     Qatar2022
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,20 +9,46 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto ">
+
       <li class="nav-item active">
         <a class="nav-link" routerLink="" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item " >
-        <a class="nav-link"routerLink="equipe" routerLinkActive="active">EQUIPE </a>
+      <li class="nav-item dropdown " >
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EQUIPE </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="equipe" routerLinkActive="active"  >List Equipe</a>
+          <a class="dropdown-item" href="#">ADD Equipe</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Equipe DETAILS</a>
+        </div>
       </li>
-      <li class="nav-item ">
-        <a class="nav-link"routerLink="joueur" routerLinkActive="active">JOUEUR</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">JOUEUR</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="joueur" routerLinkActive="active">List joueurs</a>
+          <a class="dropdown-item" href="#">ADD joueurs</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"> joueurs DETAILS</a>
+        </div>
       </li>
-      <li class="nav-item ">
-        <a class="nav-link" routerLink="match" routerLinkActive="active">MATCH</a>
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >MATCH</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="match" routerLinkActive="active">List Matchs</a>
+          <a class="dropdown-item" href="#">ADD Matchs</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">DELETE Matchs</a>
+        </div>
       </li>
-      <li class="nav-item ">
-        <a class="nav-link" routerLink="arbitre" routerLinkActive="active">ARBITRE</a>
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >ARBITRE</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="arbitre" routerLinkActive="active">List Arbitres</a>
+          <a class="dropdown-item" href="#">ADD Arbitres</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Arbitres DETAILS</a>
+        </div>
+
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
