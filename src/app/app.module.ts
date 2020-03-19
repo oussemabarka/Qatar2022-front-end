@@ -12,6 +12,7 @@ import { ArbitresComponent } from './arbitres/arbitres.component';
 import { JoueursComponent } from './joueurs/joueurs.component';
 import { MatchsComponent } from './matchs/matchs.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -23,7 +24,8 @@ import { HomeComponent } from './home/home.component';
     ArbitresComponent,
     JoueursComponent,
     MatchsComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
 
     ],
   imports: [
