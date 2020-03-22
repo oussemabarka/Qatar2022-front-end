@@ -1,1 +1,27 @@
-<p>arbitres works!</p>
+
+<div class="card my-5">
+  <p>TOUS LES ARBITRES :</p>
+  <div class="card-body">
+  <table class="table table-bordered table-striped">
+  <thead class="thead-dark">
+  <tr>
+  <th scope="col">ID</th>
+  <th scope="col">NOM</th>
+  <th scope="col">EFFECTIF</th>
+  <th scope="col">IMAGE</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let Arbitres of arbitre">
+  <td>{{ Arbitres.id }}</td>
+  <td>{{ Arbitres.nom }}</td>
+  <td>{{ Arbitres.prenom }}</td>
+<td>
+  <img src="assets/images/img_4_sq.jpg" style="height: 50px;width: 50px;">
+</td>
+
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  </div>

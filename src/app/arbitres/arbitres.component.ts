@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Arbitres } from '../model/arbitres';
+import { ArbitresService } from '../service/arbitres.service';
 
 @Component({
   selector: 'app-arbitres',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./arbitres.component.css']
 })
 export class ArbitresComponent implements OnInit {
-
-  constructor() { }
+  arbitre: Arbitres[];
+  constructor(private arbitreservice: ArbitresService) { }
 
   ngOnInit() {
-  }
+this.arbitreservice.getlistarbitres().subscribe(data => {
+this.arbitre = data;
 
+});
+
+
+
+  }
 }

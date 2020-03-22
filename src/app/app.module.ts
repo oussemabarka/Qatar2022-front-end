@@ -13,6 +13,7 @@ import { JoueursComponent } from './joueurs/joueurs.component';
 import { MatchsComponent } from './matchs/matchs.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { AddequipesComponent } from './addequipes/addequipes.component';
 
 
 
@@ -25,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
     JoueursComponent,
     MatchsComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    AddequipesComponent
 
     ],
   imports: [
