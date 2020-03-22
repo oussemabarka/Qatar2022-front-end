@@ -8,8 +8,12 @@ import { Equipes } from '../model/equipes';
 })
 export class EquipeService {
 private baseURL: string;
+private baseUrl: string;
+private baseUrl1: string;
   constructor(private http: HttpClient) {
     this.baseURL = 'http://localhost:8090/api';
+    this.baseUrl = 'http://localhost:8090/api/deleteequipe';
+    this.baseUrl1 = 'http://localhost:8090/api/getequipes';
    }
    public getlistequipe(): Observable<Equipes[]> {
 return this.http.get<[Equipes]>('//localhost:8090/api/getequipes');
@@ -18,4 +22,11 @@ return this.http.get<[Equipes]>('//localhost:8090/api/getequipes');
    public addequipe(equipes: Equipes) {
     return this.http.post('//localhost:8090/api/addequipes', equipes);
        }
+      public delete(id) {
+        return this.http.delete(`${this.baseUrl}/${id}`);
+      }
+
+     public getbyid(id) {
+        return this.http.get(`${this.baseUrl1}/${id}`);
+      }
 }

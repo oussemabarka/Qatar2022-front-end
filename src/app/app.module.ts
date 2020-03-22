@@ -14,6 +14,7 @@ import { MatchsComponent } from './matchs/matchs.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { AddequipesComponent } from './addequipes/addequipes.component';
+import { DeleteequipeComponent } from './deleteequipe/deleteequipe.component';
 
 
 
@@ -27,7 +28,8 @@ import { AddequipesComponent } from './addequipes/addequipes.component';
     MatchsComponent,
     HomeComponent,
     FooterComponent,
-    AddequipesComponent
+    AddequipesComponent,
+    DeleteequipeComponent
 
     ],
   imports: [

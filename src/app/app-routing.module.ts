@@ -6,6 +6,7 @@ import { JoueursComponent } from './joueurs/joueurs.component';
 import { MatchsComponent } from './matchs/matchs.component';
 import { HomeComponent } from './home/home.component';
 import { AddequipesComponent } from './addequipes/addequipes.component';
+import { DeleteequipeComponent } from './deleteequipe/deleteequipe.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'equipe', component: EquipesComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'joueur', component: JoueursComponent },
   { path: 'match', component: MatchsComponent },
   { path: 'addequipe', component: AddequipesComponent },
+  { path: 'deleteequipe', component: DeleteequipeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 

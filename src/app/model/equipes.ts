@@ -4,3 +4,4 @@ export class Equipes {
     nom: string;
 
 }
+
