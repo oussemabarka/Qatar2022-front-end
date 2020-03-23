@@ -11,6 +11,8 @@ import { DeletearbitresComponent } from './deletearbitres/deletearbitres.compone
 import { AddarbitreComponent } from './addarbitre/addarbitre.component';
 import { AddjoueurComponent } from './addjoueur/addjoueur.component';
 import { DeletejoueurComponent } from './deletejoueur/deletejoueur.component';
+import { DeletematchComponent } from './deletematch/deletematch.component';
+import { AddmatchComponent } from './addmatch/addmatch.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'equipe', component: EquipesComponent },
@@ -23,6 +25,8 @@ const routes: Routes = [
   { path: 'addarbitre', component: AddarbitreComponent },
   { path: 'addjoueur', component: AddjoueurComponent },
   { path: 'deletejoueur', component: DeletejoueurComponent },
+  { path: 'deletematch', component: DeletematchComponent },
+  { path: 'addmatch', component: AddmatchComponent },
 { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 

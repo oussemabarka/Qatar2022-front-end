@@ -19,6 +19,8 @@ import { DeletearbitresComponent } from './deletearbitres/deletearbitres.compone
 import { AddarbitreComponent } from './addarbitre/addarbitre.component';
 import { AddjoueurComponent } from './addjoueur/addjoueur.component';
 import { DeletejoueurComponent } from './deletejoueur/deletejoueur.component';
+import { DeletematchComponent } from './deletematch/deletematch.component';
+import { AddmatchComponent } from './addmatch/addmatch.component';
 
 
 
@@ -38,6 +40,8 @@ import { DeletejoueurComponent } from './deletejoueur/deletejoueur.component';
     AddarbitreComponent,
     AddjoueurComponent,
     DeletejoueurComponent,
+    DeletematchComponent,
+    AddmatchComponent,
 
 
     ],

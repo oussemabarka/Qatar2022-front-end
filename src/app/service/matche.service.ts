@@ -19,8 +19,8 @@ export class MatcheService {
     return this.http.get<[Matche]>('//localhost:8090/api/getmatchs');
 
        }
-       public addmatch(joueur: Matche) {
-        return this.http.post('//localhost:8090/api/addmatchs', joueur);
+       public addmatch(matche: Matche) {
+        return this.http.post('//localhost:8090/api/addmatchs', matche);
            }
           public delete(id) {
             return this.http.delete(`${this.baseUrl}/${id}`);

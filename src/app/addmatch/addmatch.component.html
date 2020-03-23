@@ -1,0 +1,39 @@
+<p>addmatch works!</p>
+
+<div class="card my-5">
+  <div class="card-body">
+  <form (ngSubmit)="onSubmit()" >
+  <div class="form-group">
+    <div class="form-group">
+      <label for="name">Stade</label>
+      <input type="text"  [(ngModel)]="matche.stade"
+      class="form-control"
+      id="stade"
+      name="stade"
+      placeholder="Enter your last name"
+      required #name="ngModel">
+
+
+
+      <label for="name">date</label>
+      <input type="date" [(ngModel)]="matche.date"
+      class="form-control"
+      id="prenom"
+      name="prenom"
+      placeholder="Enter your name"
+      required #name="ngModel">
+
+
+      </div>
+
+
+
+
+      </div>
+
+
+
+<button type="submit" class="btn btn-info">Submit</button>
+  </form>
+  </div>
+  </div>
