@@ -7,6 +7,10 @@ import { MatchsComponent } from './matchs/matchs.component';
 import { HomeComponent } from './home/home.component';
 import { AddequipesComponent } from './addequipes/addequipes.component';
 import { DeleteequipeComponent } from './deleteequipe/deleteequipe.component';
+import { DeletearbitresComponent } from './deletearbitres/deletearbitres.component';
+import { AddarbitreComponent } from './addarbitre/addarbitre.component';
+import { AddjoueurComponent } from './addjoueur/addjoueur.component';
+import { DeletejoueurComponent } from './deletejoueur/deletejoueur.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'equipe', component: EquipesComponent },
@@ -15,7 +19,11 @@ const routes: Routes = [
   { path: 'match', component: MatchsComponent },
   { path: 'addequipe', component: AddequipesComponent },
   { path: 'deleteequipe', component: DeleteequipeComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: 'deletearbitre', component: DeletearbitresComponent },
+  { path: 'addarbitre', component: AddarbitreComponent },
+  { path: 'addjoueur', component: AddjoueurComponent },
+  { path: 'deletejoueur', component: DeletejoueurComponent },
+{ path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({

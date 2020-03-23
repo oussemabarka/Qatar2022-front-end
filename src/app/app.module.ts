@@ -15,6 +15,10 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { AddequipesComponent } from './addequipes/addequipes.component';
 import { DeleteequipeComponent } from './deleteequipe/deleteequipe.component';
+import { DeletearbitresComponent } from './deletearbitres/deletearbitres.component';
+import { AddarbitreComponent } from './addarbitre/addarbitre.component';
+import { AddjoueurComponent } from './addjoueur/addjoueur.component';
+import { DeletejoueurComponent } from './deletejoueur/deletejoueur.component';
 
 
 
@@ -29,7 +33,11 @@ import { DeleteequipeComponent } from './deleteequipe/deleteequipe.component';
     HomeComponent,
     FooterComponent,
     AddequipesComponent,
-    DeleteequipeComponent
+    DeleteequipeComponent,
+    DeletearbitresComponent,
+    AddarbitreComponent,
+    AddjoueurComponent,
+    DeletejoueurComponent
 
     ],
   imports: [

@@ -9,6 +9,7 @@ import { EquipeService } from '../service/equipe.service';
 })
 export class EquipesComponent implements OnInit {
 equipes: Equipes[];
+eq1: Equipes;
   constructor(private equipeservice: EquipeService) { }
 
   ngOnInit() {

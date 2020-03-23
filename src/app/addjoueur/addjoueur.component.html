@@ -1,0 +1,44 @@
+<p>addjoueur works!</p>
+<div class="card my-5">
+  <div class="card-body">
+  <form (ngSubmit)="onSubmit()" >
+  <div class="form-group">
+    <div class="form-group">
+      <label for="name">NOM</label>
+      <input type="text"  [(ngModel)]="joueur.nom"
+      class="form-control"
+      id="nom"
+      name="nom"
+      placeholder="Enter your last name"
+      required #name="ngModel">
+
+
+
+      <label for="name">preNom</label>
+      <input type="text" [(ngModel)]="joueur.prenom"
+      class="form-control"
+      id="prenom"
+      name="prenom"
+      placeholder="Enter your name"
+      required #name="ngModel">
+
+      <label for="name">numero</label>
+      <input type="number" [(ngModel)]="joueur.numero"
+      class="form-control"
+      id="numero"
+      name="numero"
+      placeholder="Enter your name"
+      required #name="ngModel">
+      </div>
+
+
+
+
+      </div>
+
+
+
+<button type="submit" class="btn btn-info">Submit</button>
+  </form>
+  </div>
+  </div>

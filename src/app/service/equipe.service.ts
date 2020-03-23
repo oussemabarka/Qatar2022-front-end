@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Equipes } from '../model/equipes';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,7 @@ export class EquipeService {
 private baseURL: string;
 private baseUrl: string;
 private baseUrl1: string;
+
   constructor(private http: HttpClient) {
     this.baseURL = 'http://localhost:8090/api';
     this.baseUrl = 'http://localhost:8090/api/deleteequipe';
@@ -29,4 +31,12 @@ return this.http.get<[Equipes]>('//localhost:8090/api/getequipes');
      public getbyid(id) {
         return this.http.get(`${this.baseUrl1}/${id}`);
       }
-}
+     /* public getAllUsers(): Observable<Equipes[]> {
+        return this.http.get<Equipes[]>(`//localhost:8090/api/getequipes`).pipe(
+          map(data => data.map(data => new Equipes().deserialize(data)))
+
+          );
+
+      }*/
+
+    }
