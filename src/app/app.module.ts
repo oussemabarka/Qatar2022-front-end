@@ -37,7 +37,8 @@ import { DeletejoueurComponent } from './deletejoueur/deletejoueur.component';
     DeletearbitresComponent,
     AddarbitreComponent,
     AddjoueurComponent,
-    DeletejoueurComponent
+    DeletejoueurComponent,
+
 
     ],
   imports: [

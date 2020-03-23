@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Matche } from '../model/matche';
+import { MatcheService } from '../service/matche.service';
 
 @Component({
   selector: 'app-matchs',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./matchs.component.css']
 })
 export class MatchsComponent implements OnInit {
+  matche: Matche[];
 
-  constructor() { }
+    constructor(private matcheservice: MatcheService) { }
 
-  ngOnInit() {
+
+    ngOnInit() {
+      this.matcheservice.getlistematch().subscribe(data => {
+      this.matche = data;
+
+      });
   }
 
 }
