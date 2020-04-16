@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,9 @@ import { AddjoueurComponent } from './addjoueur/addjoueur.component';
 import { DeletejoueurComponent } from './deletejoueur/deletejoueur.component';
 import { DeletematchComponent } from './deletematch/deletematch.component';
 import { AddmatchComponent } from './addmatch/addmatch.component';
+import { LoginComponent } from './component/login/login.component';
+import { RegisterComponent } from './component/register/register.component';
+import { ProfileComponent } from './component/profile/profile.component';
 
 
 
@@ -42,6 +46,9 @@ import { AddmatchComponent } from './addmatch/addmatch.component';
     DeletejoueurComponent,
     DeletematchComponent,
     AddmatchComponent,
+    LoginComponent,
+    RegisterComponent,
+    ProfileComponent,
 
 
     ],
@@ -51,7 +58,7 @@ import { AddmatchComponent } from './addmatch/addmatch.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,8 @@
 import { NgModule } from '@angular/core';
+import { LoginComponent } from './component/login/login.component';
+import { RegisterComponent } from './component/register/register.component';
+import { ProfileComponent } from './component/profile/profile.component';
+
 import { Routes, RouterModule } from '@angular/router';
 import { EquipesComponent } from './equipes/equipes.component';
 import { ArbitresComponent } from './arbitres/arbitres.component';
@@ -14,6 +18,10 @@ import { DeletejoueurComponent } from './deletejoueur/deletejoueur.component';
 import { DeletematchComponent } from './deletematch/deletematch.component';
 import { AddmatchComponent } from './addmatch/addmatch.component';
 const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'profile', component: ProfileComponent },
+
   { path: 'home', component: HomeComponent },
   { path: 'equipe', component: EquipesComponent },
   { path: 'arbitre', component: ArbitresComponent },
@@ -27,6 +35,7 @@ const routes: Routes = [
   { path: 'deletejoueur', component: DeletejoueurComponent },
   { path: 'deletematch', component: DeletematchComponent },
   { path: 'addmatch', component: AddmatchComponent },
+
 { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 

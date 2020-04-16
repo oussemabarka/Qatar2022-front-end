@@ -14,47 +14,60 @@
         <a class="nav-link" routerLink="" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown " >
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EQUIPE </a>
+        <a class="nav-link dropdown-toggle"*ngIf="showAdminBoard||showUserBoard" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EQUIPE </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" routerLink="equipe" routerLinkActive="active"  >List Equipe</a>
-          <a class="dropdown-item" routerLink="addequipe" routerLinkActive="active" >ADD Equipe</a>
+          <a class="dropdown-item" *ngIf="showAdminBoard||showUserBoard" routerLink="equipe" routerLinkActive="active"  >List Equipe</a>
+          <a class="dropdown-item" *ngIf="showAdminBoard" routerLink="addequipe" routerLinkActive="active" >ADD Equipe</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="deleteequipe" routerLinkActive="active">Equipe DETAILS</a>
+          <a class="dropdown-item" *ngIf="showAdminBoard" routerLink="deleteequipe" routerLinkActive="active">Equipe DETAILS</a>
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle"id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">JOUEUR</a>
+        <a class="nav-link dropdown-toggle" *ngIf="showAdminBoard||showUserBoard"id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">JOUEUR</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" routerLink="joueur" routerLinkActive="active">List joueurs</a>
-          <a class="dropdown-item" routerLink="addjoueur" routerLinkActive="active">ADD joueurs</a>
+          <a class="dropdown-item" *ngIf="showAdminBoard||showUserBoard" routerLink="joueur" routerLinkActive="active">List joueurs</a>
+          <a class="dropdown-item" *ngIf="showAdminBoard"routerLink="addjoueur" routerLinkActive="active">ADD joueurs</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="deletejoueur" routerLinkActive="active"> joueurs DETAILS</a>
+          <a class="dropdown-item" *ngIf="showAdminBoard" routerLink="deletejoueur" routerLinkActive="active"> joueurs DETAILS</a>
         </div>
       </li>
       <li class="nav-item dropdown ">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >MATCH</a>
+        <a class="nav-link dropdown-toggle" *ngIf="showAdminBoard||showUserBoard"id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >MATCH</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" routerLink="match" routerLinkActive="active">List Matchs</a>
-          <a class="dropdown-item" routerLink="addmatch" routerLinkActive="active">ADD Matchs</a>
+          <a class="dropdown-item" *ngIf="showAdminBoard||showUserBoard"routerLink="match" routerLinkActive="active">List Matchs</a>
+          <a class="dropdown-item" *ngIf="showAdminBoard"routerLink="addmatch" routerLinkActive="active">ADD Matchs</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="deletematch" routerLinkActive="active">DELETE Matchs</a>
+          <a class="dropdown-item" *ngIf="showAdminBoard"routerLink="deletematch" routerLinkActive="active">DELETE Matchs</a>
         </div>
       </li>
       <li class="nav-item dropdown ">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >ARBITRE</a>
+        <a class="nav-link dropdown-toggle"*ngIf="showAdminBoard||showUserBoard" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >ARBITRE</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" routerLink="arbitre" routerLinkActive="active">List Arbitres</a>
-          <a class="dropdown-item" routerLink="addarbitre" routerLinkActive="active">ADD Arbitres</a>
+          <a class="dropdown-item" *ngIf="showAdminBoard||showUserBoard"routerLink="arbitre" routerLinkActive="active">List Arbitres</a>
+          <a class="dropdown-item" *ngIf="showAdminBoard"routerLink="addarbitre" routerLinkActive="active">ADD Arbitres</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item"routerLink="deletearbitre" routerLinkActive="active" >Arbitres DETAILS</a>
+          <a class="dropdown-item"*ngIf="showAdminBoard"routerLink="deletearbitre" routerLinkActive="active" >Arbitres DETAILS</a>
         </div>
 
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-primary-success btn btn-primary" type="submit">Search</button>
-    </form>
-  </div>
+    </div>
+  <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+    <li class="nav-item">
+      <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+    </li>
+    <li class="nav-item">
+      <a href="/login" class="nav-link" routerLink="login">Login</a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+    <li class="nav-item">
+      <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+    </li>
+    <li class="nav-item">
+      <a href class="nav-link" (click)="logout()">LogOut</a>
+    </li>
+  </ul>
 </nav>
 
