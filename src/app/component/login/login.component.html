@@ -1,10 +1,12 @@
-<div class="col-md-12">
-  <div class="card card-container">
-    <img
-      id="profile-img"
-      src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-      class="profile-img-card"
-    />
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="assets/logo.jpg" id="icon" alt="User Icon" />
+    </div>
+
     <form
       *ngIf="!isLoggedIn"
       name="form"
@@ -52,11 +54,7 @@
           </div>
         </div>
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary btn-block">
-          Login
-        </button>
-      </div>
+      <input type="submit" class="fadeIn fourth" value="Log In">
       <div class="form-group">
         <div
           class="alert alert-danger"
